@@ -1,6 +1,8 @@
 
 
 #include "Contact.class.hpp"
+#include <iostream>
+#include <string>
 
 class PhoneBook {
     private:
@@ -17,6 +19,9 @@ class PhoneBook {
         void List();
         void ContactInfo(int index);
         bool PhoneBookFull();
+        std::string truncate(std::string str);
+        int GetNumContacts();
+        
 
-        ~PhoneBook();
+        //~PhoneBook();
 };

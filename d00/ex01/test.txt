@@ -1,0 +1,12 @@
+add
+firstName
+lastName
+nickName
+login
+postalAddress
+emailAddress
+phoneNumber
+birthdayDate
+favoriteMeal
+underwearColour
+darkestSecret

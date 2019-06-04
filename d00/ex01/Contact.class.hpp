@@ -14,8 +14,4 @@ class Contact {
         std::string favoriteMeal;
         std::string underwearColour;
         std::string darkestSecret;
-
-        Contact(std::string thing);
-
-        ~Contact();
 };

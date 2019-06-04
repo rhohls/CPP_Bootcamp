@@ -1,35 +1,43 @@
 
 
 //#include "Contact.class.hpp"
-#include "Phonebook.class.hpp"
-
+#include "PhoneBook.class.hpp"
 
 #include <iostream>
 #include <string>
+#include <iomanip>
+
 
 int main ()
 {
     std::string cmd;
+    std::string input;
+    int i;
     PhoneBook phonebook;
 
     while (1){
-        std::cout << "Please, enter command " << std::endl;
-        std::cin >> cmd;
+        std::cout << "Please, enter command (Add, Search, Exit):" << std::endl;
+        std::getline(std::cin, cmd);
 
         std::transform(cmd.begin(), cmd.end(), cmd.begin(), ::toupper);
 
         if (cmd.compare("ADD") == 0){
-            std::cout << "you hit add" << std::endl;
+            if (!phonebook.PhoneBookFull())
+                phonebook.Add();
+            else
+                std::cout << "The phonebook is full!" << std::endl;
         }
         else if (cmd.compare("EXIT") == 0){
-            std::cout << "you hit EXIT" << std::endl;
+            break;
         }
         else if (cmd.compare("SEARCH") == 0){
-            std::cout << "you hit SEARCH" << std::endl;
+            phonebook.List();
+            std::cout << "Please, enter number: ";
+            std::getline(std::cin, input);
+            phonebook.ContactInfo(std::atoi(input.c_str()));
         }
         else{
-            std::cout << "input valid" << std::endl;
-
+            std::cout << "Input invalid" << std::endl;
         }
     }
 
