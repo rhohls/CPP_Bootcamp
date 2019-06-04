@@ -19,4 +19,4 @@ class PhoneBook {
         bool PhoneBookFull();
 
         ~PhoneBook();
-}
+};

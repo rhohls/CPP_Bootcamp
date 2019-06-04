@@ -18,4 +18,4 @@ class Contact {
         Contact(std::string thing);
 
         ~Contact();
-}
+};

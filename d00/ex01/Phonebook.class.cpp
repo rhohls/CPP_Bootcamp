@@ -1,14 +1,14 @@
 
 
 
-#include "Phonebook.class.hpp"
+#include "PhoneBook.class.hpp"
 
 
-Phonebook::Phonebook() {
+PhoneBook::PhoneBook() {
     numContacts = 0;
 }
 
-Phonebook::Add() {
+PhoneBook::Add() {
     Contact contact = listContact[numContacts];
     
     std::cout << "Enter your first name" << std::endl;
@@ -38,7 +38,7 @@ Phonebook::Add() {
 }
 
 
-Phonebook::List() {
+PhoneBook::List() {
     Contact contact;
 
     std::cout << std::setw(11);
@@ -59,14 +59,14 @@ Phonebook::List() {
     std::cout << std::setw(0);
 }
 
-Phonebook::List(int index) {
+PhoneBook::List(int index) {
     Contact contact = listContact[index];
 
     std::cout << std::setw(11);
 
 }
 
-Phonebook::PhonebookFull() {
+PhoneBook::PhoneBookFull() {
     if (numContacts >=7){
         return true;
     }
@@ -75,7 +75,7 @@ Phonebook::PhonebookFull() {
     }
 }
 
-Phonebook::truncate(std::string str) {
+PhoneBook::truncate(std::string str) {
     if (str.length() > 10){
         return (str.substr(0, 9) + ".");
     }

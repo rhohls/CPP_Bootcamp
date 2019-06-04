@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 
 # Path
 SRC_PATH = ./src/
@@ -18,7 +18,8 @@ OBJ_PATH = ./obj/
 INC_PATH = ./includes/
 
 # Files
-SRC_FILE =	
+SRC_FILE =	Contact.class.cpp \
+			Phonebook.class.cpp \
 
 OBJ_FILE = $(SRC_FILE:%.c=%.o)
 
@@ -26,7 +27,7 @@ SRC = $(addprefix $(SRC_PATH), $(SRC_FILE))
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_FILE))
 
 #Additional
-MAIN ?= megaphone.cpp
+MAIN ?= main.cpp
 
 #Compile
 CCFLAGS = -Wall -Werror -Wextra
@@ -38,13 +39,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@$(CC) -o $@ $(OBJ) $(MAIN)
 
-$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+$(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
 	@$(CC) -I$(INC_PATH) -o $@ -c $<
-
-test: compile
-	@make -C $(LIB_PATH)
-	@$(CC) -o $@ $(LIBF) $(OBJ) $(MAIN)
-	./$(NAME)
 
 clean:
 	@/bin/rm -f $(OBJ)
