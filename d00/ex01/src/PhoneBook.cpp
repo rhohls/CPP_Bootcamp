@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.class.cpp                                :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 07:37:19 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/05 07:38:56 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:58:09 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#include "PhoneBook.hpp"
 #include <iostream>
 #include <string>
 #include <iomanip>

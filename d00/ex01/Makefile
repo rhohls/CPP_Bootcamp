@@ -3,25 +3,24 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rhohls <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2018/07/09 07:36:32 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/05 10:58:54 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-# Path
+#Paths
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
 INC_PATH = ./includes/
 
-# Files
-SRC_FILE =	Contact.class.cpp \
-			Phonebook.class.cpp \
+#Files
+SRC_FILE =	Phonebook.cpp \
 
-OBJ_FILE = $(SRC_FILE:%.c=%.o)
+OBJ_FILE = $(SRC_FILE:%.cpp=%.o)
 
 SRC = $(addprefix $(SRC_PATH), $(SRC_FILE))
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_FILE))
@@ -29,25 +28,36 @@ OBJ = $(addprefix $(OBJ_PATH), $(OBJ_FILE))
 #Additional
 MAIN ?= main.cpp
 
-#Compile
-CCFLAGS = -Wall -Werror -Wextra
+#Compiler
+CCFLAGS = -Wall -Wextra -Werror
 CC = clang++ $(CCFLAGS)
 
-#Make Commands
+
+#Commands
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@$(CC) -o $@ $(OBJ) $(MAIN)
+$(NAME): $(SRC_PATH) $(OBJ_PATH) $(INC_PATH) $(OBJ)
+	$(CC) $(MAIN) -o $@ $(OBJ) 
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
-	@$(CC) -I$(INC_PATH) -o $@ -c $<
+	$(CC) -I$(INC_PATH) -o $@ -c $<
 
 clean:
-	@/bin/rm -f $(OBJ)
+	/bin/rm -rf $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	/bin/rm $(NAME)
 
 re: fclean all
 
-.PHONY: re fclean clean all test clean
+.PHONY: re fclean clean all
+
+#mkdir
+$(OBJ_PATH):
+	mkdir $(OBJ_PATH)
+
+$(INC_PATH):
+	mkdir $(INC_PATH)
+
+$(SRC_PATH):
+	mkdir $(SRC_PATH)

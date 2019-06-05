@@ -6,7 +6,7 @@
 #    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2019/06/05 07:39:23 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/05 11:01:22 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,11 +41,6 @@ $(NAME): $(OBJ)
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@$(CC) -I$(INC_PATH) -o $@ -c $<
 
-test: compile
-	@make -C $(LIB_PATH)
-	@$(CC) -o $@ $(LIBF) $(OBJ) $(MAIN)
-	./$(NAME)
-
 clean:
 	@/bin/rm -f $(OBJ)
 
@@ -54,4 +49,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re fclean clean all test clean
+.PHONY: re fclean clean all clean

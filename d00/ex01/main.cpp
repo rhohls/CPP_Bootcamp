@@ -6,11 +6,11 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 07:37:02 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/05 07:39:23 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/05 10:59:27 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#include "includes/PhoneBook.hpp"
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -19,7 +19,6 @@ int main ()
 {
     std::string cmd;
     std::string input;
-    int i;
     PhoneBook phonebook;
 
     while (1){
