@@ -1,5 +1,0 @@
-
-
-
-
-#include "Contact.class.hpp"

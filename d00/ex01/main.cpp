@@ -1,12 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/05 07:37:02 by rhohls            #+#    #+#             */
+/*   Updated: 2019/06/05 07:39:23 by rhohls           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-//#include "Contact.class.hpp"
 #include "PhoneBook.class.hpp"
-
 #include <iostream>
 #include <string>
 #include <iomanip>
-
 
 int main ()
 {
