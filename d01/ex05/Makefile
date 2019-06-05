@@ -6,20 +6,20 @@
 #    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2019/06/05 10:48:06 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/05 14:57:27 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
+NAME = human
 
 #Paths
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
-INC_PATH = ./includes/
+INC_PATH = ./incl/
 
 #Files
-SRC_FILE =	.cpp \
-			.cpp \
+SRC_FILE =	Human.cpp \
+			Brain.cpp
 
 OBJ_FILE = $(SRC_FILE:%.cpp=%.o)
 
@@ -38,16 +38,16 @@ CC = clang++ $(CCFLAGS)
 all: $(NAME)
 
 $(NAME): $(SRC_PATH) $(OBJ_PATH) $(INC_PATH) $(OBJ)
-    $(CC) -o $@ $(OBJ)
+	$(CC) $(MAIN) -o $@ $(OBJ) 
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp
-    $(CC) -I$(INC_PATH) -o $@ -c $<
+	$(CC) -I$(INC_PATH) -o $@ -c $<
 
 clean:
-    /bin/rm -rf $(OBJ)
+	/bin/rm -rf $(OBJ)
 
 fclean: clean
-    /bin/rm $(NAME)
+	/bin/rm $(NAME)
 
 re: fclean all
 
@@ -55,10 +55,10 @@ re: fclean all
 
 #mkdir
 $(OBJ_PATH):
-    mkdir $(OBJ_PATH)
+	mkdir $(OBJ_PATH)
 
 $(INC_PATH):
-    mkdir $(INC_PATH)
+	mkdir $(INC_PATH)
 
 $(SRC_PATH):
-    mkdir $(SRC_PATH)
+	mkdir $(SRC_PATH)

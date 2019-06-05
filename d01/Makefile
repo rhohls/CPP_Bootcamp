@@ -6,7 +6,7 @@
 #    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2019/06/05 13:16:31 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/05 14:51:48 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,8 @@ OBJ_PATH = ./obj/
 INC_PATH = ./incl/
 
 #Files
-SRC_FILE =	Zombie.cpp \
-			ZombieEvent.cpp
+SRC_FILE =	Human.cpp \
+			Brain.cpp
 
 OBJ_FILE = $(SRC_FILE:%.cpp=%.o)
 

@@ -6,7 +6,7 @@
 #    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2019/06/05 10:58:54 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/05 13:49:18 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJ_PATH = ./obj/
 INC_PATH = ./includes/
 
 #Files
-SRC_FILE =	Phonebook.cpp \
+SRC_FILE =	PhoneBook.cpp 
 
 OBJ_FILE = $(SRC_FILE:%.cpp=%.o)
 
