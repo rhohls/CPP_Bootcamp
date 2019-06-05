@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:37:02 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/05 10:07:34 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/05 12:56:56 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,14 @@ Zombie *ZombieEvent::newZombie(std::string name)
 
 Zombie *ZombieEvent::randomChump()
 {
+    Zombie *ret;
     int rand_num;
     int num_names = 10;
     std::string names[] = {"Grace", "Bob", "Fred", "John", "Andrew", "Wesely", "Olivia", "Isabella", "George", "Lily"}; 
     
-    // srand(time(0));
     rand_num = rand() % num_names;
-    
-    return (newZombie(names[rand_num]));
+    ret = newZombie(names[rand_num]);
+
+    ret->announce();
+    return (ret);
 }
