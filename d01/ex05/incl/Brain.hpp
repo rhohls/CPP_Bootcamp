@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 14:44:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/05 14:47:06 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/06 07:38:59 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
 public:
     Brain(/* args */);
 
-    std::string identify();
+    std::string identify() const;
 
     ~Brain();
 };

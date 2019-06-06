@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 14:47:35 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/05 14:54:15 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/06 07:56:48 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 #define HUMAN_H
 
 #include <string>
+#include "Brain.hpp"
 
 class Human
 {
 private:
-    /* data */
+    Brain const _brain;
 public:
     Human();
 
-    std::string identify();
-    void getBrain();
+    std::string identify() const;
+    const Brain &getBrain();
 
     ~Human();
 };

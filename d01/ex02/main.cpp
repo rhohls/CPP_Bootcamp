@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 12:25:13 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/05 13:08:27 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/06 07:53:29 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ int main()
     factory.setZombieType("short lived");
     new_zom = factory.randomChump();
     delete new_zom;
+    new_zom = factory.randomChump();
+    delete new_zom;
+
+    factory.setZombieType("with a hat");
     new_zom = factory.randomChump();
     delete new_zom;
 
