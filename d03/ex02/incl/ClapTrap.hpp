@@ -1,38 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/07 14:45:48 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/07 14:43:45 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		FRAGTRAP_HPP
-# define	FRAGTRAP_HPP
+#ifndef		CLAPTRAP_HPP
+# define	CLAPTRAP_HPP
 
 #include <string>
-#include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
-	public:	
-		FragTrap(std::string name);
-		FragTrap(FragTrap const & src);
+class ClapTrap {
+	public:
+		unsigned int HP;
+		unsigned int maxHP;
+		unsigned int EP;
+		unsigned int maxEP;
+		unsigned int meleeDMG;
+		unsigned int rangeDMG;
+		unsigned int DMGReduction; 
+		
+		ClapTrap(std::string name);
+		ClapTrap(ClapTrap const & src);
 
 		void rangedAttack(std::string const & target);
 		void meleeAttack(std::string const & target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		void vaulthunter_dot_exe(std::string const & target);
 
-		~FragTrap();
-		FragTrap & operator=(FragTrap const & src);
+		~ClapTrap();
+		ClapTrap & operator=(ClapTrap const & src);
 	
 	private:
-		static const std::string attack_type[];
-		static const int attack_damage[];
+		std::string m_name;
+		int m_lvl;
+		
+		
 
 	protected:
 

@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/07 13:40:13 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/07 14:44:55 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,10 @@
 # define	SCAVTRAP_HPP
 
 #include <string>
+#include "ClapTrap.hpp"
 
-class ScavTrap {
-	public:
-		unsigned int HP;
-		unsigned int maxHP;
-		unsigned int EP;
-		unsigned int maxEP;
-		unsigned int meleeDMG;
-		unsigned int rangeDMG;
-		unsigned int DMGReduction; 
-		
+class ScavTrap : public ClapTrap {
+	public:	
 		ScavTrap(std::string name);
 		ScavTrap(ScavTrap const & src);
 
@@ -39,10 +32,6 @@ class ScavTrap {
 	
 	private:
 		static const std::string challenges[];
-
-		std::string m_name;
-		int m_lvl;
-		
 		
 
 	protected:
