@@ -31,14 +31,17 @@ FragTrap::FragTrap(std::string name)
 
 	m_name = name;
 	m_lvl = 1;
+	std::cout << "FR4G-TP <" + m_name + "> created" << std::endl;
 }
 
 FragTrap::FragTrap(FragTrap const &src)
 {
 	*this = src;
-}
+ }
 
-FragTrap::~FragTrap() {}
+FragTrap::~FragTrap() {
+	std::cout << "FR4G-TP <" + m_name + "> destroyed " << std::endl;
+}
 
 FragTrap &FragTrap::operator=(FragTrap const &src)
 {
@@ -105,6 +108,14 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
     
 	rand_num = rand() % num_attacks;
 
-	std::cout << "FR4G-TP <" + m_name + "> performed a \"" + attack_type[rand_num] << " attack\" against "
+	if (EP < 25)
+	{
+		std::cout << "FR4G-TP <" + m_name + "> doesn't have enough energy to perform this attack" << std::endl;
+	}
+	else
+	{
+		std::cout << "FR4G-TP <" + m_name + "> performed a \"" + attack_type[rand_num] << " attack\" against "
 			 + target + ", causing " << attack_damage[rand_num] << " points of damage!" << std::endl;
+		EP -= 25;
+	}
 }
