@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:03:39 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/07 14:01:03 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/08 09:14:29 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,6 @@ int main()
     bigboy.beRepaired(100);
 
     bigboy.challengeNewcomer("Fred");
+    
+    std::cout << std::endl;
 }

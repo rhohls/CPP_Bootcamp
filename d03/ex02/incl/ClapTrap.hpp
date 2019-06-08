@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/08 08:30:51 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/08 08:58:56 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ClapTrap {
 		unsigned int rangeDMG;
 		unsigned int DMGReduction; 
 		
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const & src);
 
@@ -42,12 +43,10 @@ class ClapTrap {
 		ClapTrap & operator=(ClapTrap const & src);
 	
 	private:
+		
+	protected:
 		std::string m_name;
 		int m_lvl;
-		
-		
-
-	protected:
 
 };
 

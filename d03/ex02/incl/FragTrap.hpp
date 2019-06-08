@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/08 08:30:42 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/08 08:55:42 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@ class FragTrap : public ClapTrap {
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		void vaulthunter_dot_exe(std::string const & target);
-
-		std::string getName();
-		void setName(std::string new_name);
-		int getLevel();
-		void setLevel(int new_lvl);
 
 		~FragTrap();
 		FragTrap & operator=(FragTrap const & src);

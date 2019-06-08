@@ -6,11 +6,11 @@
 #    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2019/06/07 14:01:50 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/08 09:13:27 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scav
+NAME = clap
 
 #Paths
 SRC_PATH = ./src/
@@ -20,6 +20,7 @@ INC_PATH = ./incl/
 #Files
 SRC_FILE =	FragTrap.cpp \
 			ScavTrap.cpp \
+			ClapTrap.cpp \
 
 OBJ_FILE = $(SRC_FILE:%.cpp=%.o)
 

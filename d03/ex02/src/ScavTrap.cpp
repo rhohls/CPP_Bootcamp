@@ -15,7 +15,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-// std::pair<int, std::string> bob[] = {{3, "magic"}};
 const std::string ScavTrap::challenges[] = {"Poor", "MASSIVE", "Confusing", "Dance off", "dishwashing", "Cook-off"};
 
 ScavTrap::ScavTrap(std::string name)
