@@ -119,3 +119,4 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
 		EP -= 25;
 	}
 }
+

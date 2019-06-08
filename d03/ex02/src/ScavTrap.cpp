@@ -110,3 +110,4 @@ void ScavTrap::challengeNewcomer(std::string const & target)
 	std::cout << "$C4V-TP <" + m_name + "> intiated a \"" + challenges[rand_num] << " challenge\" against "
 			 + target + ", WHAT NOW?!" << std::endl;
 }
+

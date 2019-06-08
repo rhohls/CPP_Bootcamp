@@ -110,3 +110,23 @@ void ScavTrap::challengeNewcomer(std::string const & target)
 	std::cout << "$C4V-TP <" + m_name + "> intiated a \"" + challenges[rand_num] << " challenge\" against "
 			 + target + ", WHAT NOW?!" << std::endl;
 }
+
+std::string ScavTrap::getName()
+{
+	return m_name;
+}
+
+void ScavTrap::setName(std::string new_name)
+{
+	m_name = new_name;
+}
+
+int ScavTrap::getLevel()
+{
+	return m_lvl;
+}
+
+void ScavTrap::setLevel(int new_lvl)
+{
+	m_lvl = new_lvl;
+}

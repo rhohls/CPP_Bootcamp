@@ -119,3 +119,24 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
 		EP -= 25;
 	}
 }
+
+
+std::string FragTrap::getName()
+{
+	return m_name;
+}
+
+void FragTrap::setName(std::string new_name)
+{
+	m_name = new_name;
+}
+
+int FragTrap::getLevel()
+{
+	return m_lvl;
+}
+
+void FragTrap::setLevel(int new_lvl)
+{
+	m_lvl = new_lvl;
+}

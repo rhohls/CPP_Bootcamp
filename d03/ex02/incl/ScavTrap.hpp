@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/07 14:44:55 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/08 08:30:23 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ class ScavTrap : public ClapTrap {
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		void challengeNewcomer(std::string const & target);
+
+		std::string getName();
+		void setName(std::string new_name);
+		int getLevel();
+		void setLevel(int new_lvl);
 
 		~ScavTrap();
 		ScavTrap & operator=(ScavTrap const & src);
