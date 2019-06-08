@@ -18,6 +18,21 @@
 // std::pair<int, std::string> bob[] = {{3, "magic"}};
 const std::string ScavTrap::challenges[] = {"Poor", "MASSIVE", "Confusing", "Dance off", "dishwashing", "Cook-off"};
 
+ScavTrap::ScavTrap()
+{
+	HP = 60;
+	maxHP = 60;
+	EP = 120;
+	maxEP = 120;
+	meleeDMG = 60;
+	rangeDMG = 5;
+	DMGReduction = 0;
+
+	m_name = "scav";
+	m_lvl = 1;
+	std::cout << "defualt $C4V-TP <" + m_name + "> generated" << std::endl;
+}
+
 ScavTrap::ScavTrap(std::string name)
 {
 	HP = 60;

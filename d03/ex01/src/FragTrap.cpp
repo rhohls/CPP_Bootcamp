@@ -19,6 +19,21 @@
 const std::string FragTrap::attack_type[] = {"Magical", "Ether", "Obscene", "Indescribable", "Poor", "Fish slap"};
 const int		  FragTrap::attack_damage[] = {20, 		10, 		63, 		45, 			1,		3};
 
+FragTrap::FragTrap()
+{
+	HP = 100;
+	maxHP = 100;
+	EP = 100;
+	maxEP = 100;
+	meleeDMG = 30;
+	rangeDMG = 20;
+	DMGReduction = 5;
+
+	m_name = "frag";
+	m_lvl = 1;
+	std::cout << "defualt FR4G-TP <" + m_name + "> created" << std::endl;
+}
+
 FragTrap::FragTrap(std::string name)
 {
 	HP = 100;

@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/08 08:55:42 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/08 09:20:37 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 class FragTrap : public ClapTrap {
 	public:	
+		FragTrap();
 		FragTrap(std::string name);
 		FragTrap(FragTrap const & src);
 

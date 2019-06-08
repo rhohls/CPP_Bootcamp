@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/08 09:01:23 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/08 09:22:25 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 class ScavTrap : public ClapTrap {
 	public:	
+		ScavTrap();
 		ScavTrap(std::string name);
 		ScavTrap(ScavTrap const & src);
 

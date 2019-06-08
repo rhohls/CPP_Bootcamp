@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 07:20:30 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/08 08:29:50 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/08 09:20:33 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class FragTrap {
 		unsigned int rangeDMG;
 		unsigned int DMGReduction; 
 		
+		FragTrap();
 		FragTrap(std::string name);
 		FragTrap(FragTrap const & src);
 
