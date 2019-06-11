@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "../incl/Form.hpp"
 
-Form::Form(std::string name, int signRequired, int excuteRequired)
-	: m_name(name), m_signRequired(signRequired), m_excuteRequired(excuteRequired)
+Form::Form(std::string name, int signRequired, int excuteRequired, std::string target)
+	: m_name(name), m_signRequired(signRequired), m_excuteRequired(excuteRequired), m_target(target)
 {
 	m_signed = false;
 	checkGrade(m_signRequired);
@@ -47,6 +47,20 @@ std::string Form::getName() const
 	return (m_name);
 }
 
+bool Form::getSigned() const 
+{
+	return (m_signed);
+}
+
+std::string Form::getTarget() const
+{
+	return (m_target);
+}
+
+int Form::getSignRequired() const
+{
+	return (m_signRequired);
+}
 
 void Form::beSigned(Bureaucrat &signee)
 {
@@ -63,7 +77,6 @@ void Form::checkGrade(int grade)
 	else if (grade > 150)
 		throw GradeTooLowException();
 }
-
 
 
 const char *Form::GradeTooHighException::what() const throw()

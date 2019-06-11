@@ -6,7 +6,7 @@
 #    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2019/06/11 12:36:24 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/11 15:21:56 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,10 @@ INC_PATH = ./incl/
 
 #Files
 SRC_FILE =	Bureaucrat.cpp \
-			Form.cpp
+			Form.cpp	\
+			ShrubberyCreationForm.cpp \
+			RobotomyRequestForm.cpp \
+			PresidentialPardonForm.cpp \
 
 OBJ_FILE = $(SRC_FILE:%.cpp=%.o)
 
