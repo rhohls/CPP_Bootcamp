@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "../incl/Bureaucrat.hpp"
+#include "../incl/Form.hpp"
 
 Bureaucrat::Bureaucrat() {}
 
@@ -74,6 +75,19 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 	return "Grade value too low";
 }
 
+void Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << m_name << " signs " << form.getName() << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << m_name << " cannot sign " <<  form.getName() 
+					<< " because " << e.what() << std::endl;
+	}
+}
 
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &src)
 {
