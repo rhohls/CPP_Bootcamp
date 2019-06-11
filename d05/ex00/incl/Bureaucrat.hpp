@@ -18,16 +18,13 @@
 
 
 class Bureaucrat {
-	struct GradeTooHighException : public std::exception {
-		const char * what () const throw () {
-			return "Grade value too high";
-		}
+	class GradeTooHighException : public std::exception {
+		const char * what () const throw ();
 	};
-	struct GradeTooLowException : public std::exception {
-		const char * what () const throw () {
-			return "Grade value too low";
-		}
+	class GradeTooLowException : public std::exception {
+		const char * what () const throw ();
 	};
+	
 	public:
 		Bureaucrat(std::string input_name, int input_grade);
 		
@@ -36,7 +33,7 @@ class Bureaucrat {
 		Bureaucrat & operator=(Bureaucrat const & src);
 
 		int getGrade() const;
-		std::string getName() const;
+		const std::string getName() const;
 
 		void increaseGrade();
 		void decreaseGrade();
@@ -45,7 +42,7 @@ class Bureaucrat {
 		Bureaucrat();
 		
 		int m_grade;
-		std::string m_name; 
+		const std::string m_name; 
 
 		void setGrade(int new_val);
 

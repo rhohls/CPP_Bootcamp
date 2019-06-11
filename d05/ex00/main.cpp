@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 08:10:14 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/11 08:57:48 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/11 10:27:27 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main()
     {
         std::cout << "There was an error, it was: " << e.what() << std::endl;
     }
+    delete steve;
     std::cout << std::endl;
 
     //decrement

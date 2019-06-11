@@ -31,8 +31,8 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &src)
 }
 
 Bureaucrat::Bureaucrat(std::string input_name, int input_grade)
+	:m_name(input_name)
 {
-	m_name = input_name;
 	setGrade(input_grade);
 }
 
@@ -41,7 +41,7 @@ int Bureaucrat::getGrade() const
 	return (m_grade);
 }
 
-std::string Bureaucrat::getName() const
+const std::string Bureaucrat::getName() const
 {
 	return (m_name);
 }
@@ -63,6 +63,15 @@ void Bureaucrat::increaseGrade()
 void Bureaucrat::decreaseGrade()
 {
 	setGrade(m_grade + 1);
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade value too high";
+}
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade value too low";
 }
 
 
