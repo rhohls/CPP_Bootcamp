@@ -47,6 +47,10 @@ std::string Form::getName() const
 	return (m_name);
 }
 
+bool Form::getSigned() const 
+{
+	return (m_signed);
+}
 
 void Form::beSigned(Bureaucrat &signee)
 {

@@ -48,9 +48,8 @@ private:
 	const int m_signRequired;
 	const int m_excuteRequired;
 
-	void checkGrade(int grade);
-
 protected:
+	void checkGrade(int grade);
 };
 
 std::ostream &operator<<(std::ostream &os, Form const &src);
