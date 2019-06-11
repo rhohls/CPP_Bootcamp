@@ -16,18 +16,18 @@
 #include <iostream>
 #include <exception>
 
-struct GradeTooHighException : public std::exception {
-   const char * what () const throw () {
-      return "Grade value too high";
-   }
-};
-struct GradeTooLowException : public std::exception {
-   const char * what () const throw () {
-      return "Grade value too low";
-   }
-};
 
 class Bureaucrat {
+	struct GradeTooHighException : public std::exception {
+		const char * what () const throw () {
+			return "Grade value too high";
+		}
+	};
+	struct GradeTooLowException : public std::exception {
+		const char * what () const throw () {
+			return "Grade value too low";
+		}
+	};
 	public:
 		Bureaucrat(std::string input_name, int input_grade);
 		
