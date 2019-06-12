@@ -6,7 +6,7 @@
 /*   By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 08:10:14 by rhohls            #+#    #+#             */
-/*   Updated: 2019/06/11 15:22:55 by rhohls           ###   ########.fr       */
+/*   Updated: 2019/06/12 07:45:33 by rhohls           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,33 @@
 #include "./incl/ShrubberyCreationForm.hpp"
 #include "./incl/RobotomyRequestForm.hpp"
 #include "./incl/PresidentialPardonForm.hpp"
+#include "./incl/Intern.hpp"
 #include <iostream>
 #include <stdlib.h> 
 #include <time.h>
 
 int main()
 {
-    srand (time(NULL));
-    Bureaucrat steve("Alan", 1);
+    Intern someRandomIntern;
+    Form* rrf;
 
-    //shrub
-    ShrubberyCreationForm shrub("big");
     try
     {
-        steve.signForm(shrub);
-        shrub.excute(steve);
-        std::cout << "check ouput file "<< std::endl;
-        
+        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        delete rrf;
     }
     catch (std::exception & e)
     {
         std::cout << "There was an error, it was: " << e.what() << std::endl;
     }
-    std::cout << std::endl;
 
-    //robot
-    RobotomyRequestForm robot("Marvin");
     try
     {
-        steve.signForm(robot);
-        robot.excute(steve);
+        rrf = someRandomIntern.makeForm("Non existing", "Bender");
+        delete rrf;
     }
     catch (std::exception & e)
     {
         std::cout << "There was an error, it was: " << e.what() << std::endl;
     }
-    std::cout << std::endl;
-
-    //robot
-    PresidentialPardonForm fooorm("Arthur");
-    try
-    {
-        steve.signForm(fooorm);
-        fooorm.excute(steve);
-    }
-    catch (std::exception & e)
-    {
-        std::cout << "There was an error, it was: " << e.what() << std::endl;
-    }
-    std::cout << std::endl;
 }
