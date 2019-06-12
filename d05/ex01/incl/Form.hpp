@@ -18,6 +18,7 @@
 
 class Form
 {
+public:
 	struct GradeTooHighException : public std::exception
 	{
 		const char *what() const throw();
@@ -28,7 +29,6 @@ class Form
 	};
 
 
-public:
 	Form(std::string name, int signRequired, int excuteRequired);
 
 	Form(Form const &src);

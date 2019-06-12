@@ -20,10 +20,10 @@
 class Bureaucrat {
 	
 	public:
-	class GradeTooHighException : public std::exception {
+	struct GradeTooHighException : public std::exception {
 		const char * what () const throw ();
 	};
-	class GradeTooLowException : public std::exception {
+	struct GradeTooLowException : public std::exception {
 		const char * what () const throw ();
 	};
 		Bureaucrat(std::string input_name, int input_grade);

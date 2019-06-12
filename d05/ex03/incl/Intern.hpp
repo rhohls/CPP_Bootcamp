@@ -17,7 +17,7 @@
 
 class Intern {
 	public:
-		class FormNotFound : public std::exception {
+		struct FormNotFound : public std::exception {
 			const char * what () const throw ();
 		};
 
