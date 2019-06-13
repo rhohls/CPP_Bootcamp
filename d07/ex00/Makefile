@@ -6,11 +6,11 @@
 #    By: rhohls <rhohls@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/22 11:19:09 by rhohls            #+#    #+#              #
-#    Updated: 2019/06/12 11:56:06 by rhohls           ###   ########.fr        #
+#    Updated: 2019/06/12 14:07:00 by rhohls           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cast
+NAME = template
 
 #Paths
 SRC_PATH = ./src/
@@ -29,7 +29,7 @@ OBJ = $(addprefix $(OBJ_PATH), $(OBJ_FILE))
 MAIN ?= main.cpp
 
 #Compiler
-CCFLAGS = -Wall -Wextra -Werror -std=c++98 -Wconversion
+CCFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = clang++ $(CCFLAGS)
 
 
